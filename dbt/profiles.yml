@@ -1,0 +1,9 @@
+lake:
+  target: prod
+  outputs:
+    prod:
+      type: duckdb
+      path: ../duckdb/database.duckdb
+      extensions:
+        - parquet
+      threads: 1

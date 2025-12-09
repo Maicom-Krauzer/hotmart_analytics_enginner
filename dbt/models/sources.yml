@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: external_table
+    tables:
+      - name: product_item_source_ex1
+        config:
+          external_location: 'seeds/exercicio_1/product_item_source_ex1.csv'
+      - name: purchase_source_ex1
+        config:
+          external_location: 'seeds/exercicio_1/purchase_source_ex1.csv'
+      - name: product_item_source_ex2
+        config:
+          external_location: 'seeds/exercicio_2/product_item_source_ex2.csv'
+      - name: purchase_extra_info_source_ex2
+        config:
+          external_location: 'seeds/exercicio_2/purchase_extra_info_source_ex2.csv'
+      - name: purchase_source_ex2
+        config:
+          external_location: 'seeds/exercicio_2/purchase_source_ex2.csv'

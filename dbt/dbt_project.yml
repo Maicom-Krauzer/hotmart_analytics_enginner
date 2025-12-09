@@ -1,0 +1,28 @@
+name: 'data_lake'
+version: '1.0.0'
+
+profile: 'lake'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  data_lake:
+    exercicio_1:
+      camada1:
+        +schema: ex1_camada1
+      camada2:
+        +schema: ex1_camada2
+    exercicio_2:
+      camada1:
+        +schema: ex2_camada1
+      camada2:
+        +schema: ex2_camada2

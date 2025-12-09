@@ -1,0 +1,5 @@
+purchase_id,transaction_datetime,transaction_date,subsidiary
+55,2023-01-23 00:05:00,2023-01-23,nacional
+56,2023-01-25 23:59:59,2023-01-25,internacional
+69,2023-02-28 01:10:00,2023-02-28,nacional
+69,2023-03-12 07:00:00,2023-03-12,internacional
