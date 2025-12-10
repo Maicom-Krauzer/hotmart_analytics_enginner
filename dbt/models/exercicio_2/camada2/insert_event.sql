@@ -1,6 +1,7 @@
-{{ config (
+{{ config(
     materialized='incremental',
-    incremental_strategy= 'append',
+    incremental_strategy = 'delete+insert',
+    unique_key = ['purchase_id', 'transaction_date'],
     partition_by= ['transaction_date']
 ) }}
 

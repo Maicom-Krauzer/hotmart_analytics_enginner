@@ -1,6 +1,7 @@
-{{ config (
+{{ config(
     materialized='incremental',
-    incremental_strategy= 'append',
+    incremental_strategy = 'delete+insert',
+    unique_key = ['purchase_id', 'transaction_date'],
     partition_by= ['transaction_date']
 ) }}
 
@@ -13,7 +14,7 @@ filtro_dia_anterior as (
     where transaction_date = today() -1 -- Necessário considerar idempotência no today() em reexecuções de determinados dias
     union
     select *
-    from {{ this }}
+    from {{ this }} -- Union com os dados da tabela atual para conseguir executar função de janela no script abaixo.
     {% endif %}
 )
 select
